@@ -13,7 +13,7 @@
 	<url>http://www.in28minutes.com</url>
 
 	<dependencies>
-		<dependency>
+    		<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>4.1</version>
@@ -24,7 +24,8 @@
 				<artifactId>surefire-junit4</artifactId>
 				<version>2.19.1</version>
 		</dependency>
-	    <dependency>
+
+		<dependency>
 			  <groupId>org.apache.maven.plugins</groupId>
 			  <artifactId>maven-jdeprscan-plugin</artifactId>
 			  <version>3.0.0-alpha-1</version>
