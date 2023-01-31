@@ -3,3 +3,6 @@ ls -lt | tail -n +2 | tr -s ' ' | cut -d" " -f 5,9
 
 #find ID of process running on a port
 sudo lsof -t -i:8080
+
+#kill process running on a port
+sudo kill -9 $(sudo lsof -t -i:9001)
