@@ -1,2 +1,5 @@
 netstat -nlp | grep :22 | tr -s ' ' | cut -d" " -f 7 | cut -d"/" -f 1
 ls -lt | tail -n +2 | tr -s ' ' | cut -d" " -f 5,9
+
+#find ID of process running on a port
+sudo lsof -t -i:8080
