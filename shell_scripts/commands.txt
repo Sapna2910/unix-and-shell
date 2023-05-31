@@ -6,3 +6,6 @@ sudo lsof -t -i:8080
 
 #kill process running on a port
 sudo kill -9 $(sudo lsof -t -i:9001)
+
+#cop a file to multiple directories
+ echo "p1/ p2/ p3/" | xargs -n 1 cp -v pom_new.xml  //p1 p2 p3 are dir names and pom_new.xml is file name
