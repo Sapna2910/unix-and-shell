@@ -17,3 +17,10 @@ sudo kill -9 $(sudo lsof -t -i:9001)
 
 #cronjobs
 * *  * * * represents minute(s) hour(s) day(s) month(s) weekday(s), respectively.
+
+#How to check system architecture info?
+1.dmidecode and lscpu
+2.uname -a
+
+#check IP address and create shortcut for the same
+alias ipaddress="echo $( ifconfig | grep broadcast | awk '{print $2}' )"
