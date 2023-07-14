@@ -4,6 +4,9 @@ ls -lt | tail -n +2 | tr -s ' ' | cut -d" " -f 5,9
 #find ID of process running on a port
 sudo lsof -t -i:8080
 
+#number of connections
+sudo netstat -nl | grep :22 | wc -l
+
 #kill process running on a port
 sudo kill -9 $(sudo lsof -t -i:9001)
 
@@ -24,3 +27,12 @@ sudo kill -9 $(sudo lsof -t -i:9001)
 
 #check IP address and create shortcut for the same
 alias ipaddress="echo $( ifconfig | grep broadcast | awk '{print $2}' )"
+
+#changing file permissions
+umask can be used. '+' is used for adding permission, '-' is used ffor removing permission.
+eg:
+ 
+umask u+rw, g+rw, o-r
+
+this would change all default permissions, but as soon as we logout these changes will revert.
+to make it permanent we need to make changes in the /.bashrc file, found in etc/bashrc
